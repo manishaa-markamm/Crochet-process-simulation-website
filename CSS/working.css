@@ -35,7 +35,7 @@ justify-content: center;
     left:42px;
 }
 .child1{
-    background-image: url(/LOGO/teddy.jpg);
+    background-image: url(teddy.jpg);
     background-size: cover;
     height: 350px;
 }
@@ -90,7 +90,7 @@ justify-content: center;
     position: absolute;
     left:40px;
     top: 39px;
-    background-image: url(/LOGO/bear.jpg);
+    background-image: url(bear.jpg);
     background-size: cover;
     height:350px;
     width: 310px;
@@ -217,3 +217,4 @@ justify-content: center;
     left:80px;
     font-size:21px;
 }
+
