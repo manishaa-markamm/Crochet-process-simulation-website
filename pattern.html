@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pattern Details | CraftStep</title>
     <link rel="stylesheet" href="homie.css">
-    <link rel="stylesheet" href="pattern.css"> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pattern.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -17,16 +18,28 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="homepage.html">Explore</a></li>
+            <li><a href="#">Tutorials</a></li>
         </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
 
     <main class="pattern-container">
+        
         <div class="pattern-header">
-            <h1 id="p-title">Loading...</h1>
-            <p id="p-time" class="time-badge">⏱️ Calculating time...</p>
+            <h1 id="p-title">Loading Pattern...</h1>
+            <div class="meta-tags">
+                <span id="p-difficulty" class="badge">Difficulty</span>
+                <span id="p-category" class="badge" style="background:#e3f2fd; color:#1565c0;">Category</span>
+                <span id="p-time" class="time-badge">⏱️ Calculating time...</span>
+            </div>
         </div>
 
         <div class="pattern-grid">
+            
             <div class="pattern-visual">
                 <img id="p-image" src="" alt="Craft Preview">
             </div>
@@ -46,13 +59,13 @@
                 </div>
 
                 <div class="info-group">
-                    <h3>📝 Techniques (Overview)</h3>
+                    <h3>📝 Techniques Used</h3>
                     <div class="tech-tags" id="p-techs">
                         </div>
                 </div>
 
                 <div class="action-area">
-                    <a href="homepage.html" class="btn-secondary">Go Back</a>
+                    <a href="homepage.html" class="btn-secondary">← Go Back</a>
                     <button id="start-tutorial-btn" class="btn-primary-lg">Start Tutorial 🚀</button>
                 </div>
             </div>
@@ -64,6 +77,12 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Mobile Menu Script
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
-  </html>
-  
+                    </html>
+                        
