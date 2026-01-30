@@ -44,7 +44,41 @@
 
     <div class="blob-left"></div>
     <div class="blob-right"></div>
+<div class="search-icon">
+    <a href="homepage.html"> 
+        <img src="searcicon.png" alt="Search">
+    </a>
+</div>
 
+<style>
+/* Add this to landing.css */
+@media (max-width: 768px) {
+    .hero-img {
+        max-width: 250px; /* Shrink image on phone so it fits */
+        margin-bottom: 20px;
+    }
+    .hero-text h1 {
+        font-size: 3rem; /* Smaller text on phone */
+    }
+    .hero {
+        padding: 20px;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+}
+.explore-btn {
+    /* Hover Animation */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.explore-btn:hover {
+    transform: scale(1.05);
+    background: #333;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+</style>
+    
 </body>
     </html>
     
+
