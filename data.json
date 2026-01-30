@@ -1,33 +1,27 @@
 [
   {
     "id": "teddy",
-    "name": "Classic Amigurumi Bear",
+    "name": "Classic Teddy Bear",
     "image": "teddy.jpg",
     "difficulty": "Intermediate",
     "category": "Toys",
     "details": {
       "time": "4-5 Hours",
-      "materials": ["Brown Cotton Yarn (DK Weight)", "Polyester Stuffing", "Safety Eyes (10mm)", "Black Embroidery Thread"],
-      "tools": ["3.5mm Crochet Hook", "Yarn Needle", "Stitch Markers", "Scissors"],
-      "techniques": ["Magic Ring (MR)", "Single Crochet (sc)", "Increase (inc)", "Invisible Decrease (dec)"]
+      "materials": ["Brown Cotton Yarn", "Polyester Stuffing", "Safety Eyes (10mm)", "Black Thread"],
+      "tools": ["3.5mm Hook", "Yarn Needle", "Stitch Markers"],
+      "techniques": ["Magic Ring", "Single Crochet (sc)", "Increase (inc)", "Decrease (dec)"]
     },
     "steps": [
-      {"text": "Create a Magic Ring.", "detail": "Wrap yarn around finger, pull up a loop, chain 1 to secure.", "media": "assets/magic-ring.gif"},
-      {"text": "Round 1: 6 SC into Magic Ring.", "detail": "Work 6 single crochets into the center. Pull tail tight.", "media": "assets/sc.gif"},
-      {"text": "Round 2: Increase in every stitch.", "detail": "2 SC in each stitch around. Total: 12 stitches.", "media": "assets/inc.gif"},
-      {"text": "Round 3: (1 SC, Inc) repeat around.", "detail": "SC in first stitch, 2 SC in next. Repeat 6 times. Total: 18.", "media": "assets/inc.gif"},
-      {"text": "Round 4: (2 SC, Inc) repeat around.", "detail": "SC in next 2 stitches, 2 SC in next. Repeat 6 times. Total: 24.", "media": "assets/sc.gif"},
-      {"text": "Round 5: (3 SC, Inc) repeat around.", "detail": "SC in next 3 stitches, 2 SC in next. Repeat 6 times. Total: 30.", "media": "assets/sc.gif"},
-      {"text": "Rounds 6-12: SC in each stitch.", "detail": "Work even rows to build the height of the head. 30 stitches per row.", "media": "assets/sc.gif"},
-      {"text": "Insert Safety Eyes.", "detail": "Place eyes between Round 9 and 10, about 5 stitches apart.", "media": "assets/eyes.jpg"},
-      {"text": "Round 13: (3 SC, Dec) repeat around.", "detail": "Start closing the head. SC 3, then invisible decrease. Total: 24.", "media": "assets/dec.gif"},
-      {"text": "Round 14: (2 SC, Dec) repeat around.", "detail": "SC 2, decrease. Total: 18.", "media": "assets/dec.gif"},
-      {"text": "Stuff the Head firmly.", "detail": "Add stuffing now before the hole gets too small.", "media": "assets/stuffing.jpg"},
-      {"text": "Round 15: (1 SC, Dec) repeat around.", "detail": "SC 1, decrease. Total: 12.", "media": "assets/dec.gif"},
-      {"text": "Round 16: Decrease around.", "detail": "Decrease 6 times. Total: 6 stitches.", "media": "assets/dec.gif"},
-      {"text": "Fasten off and weave in end.", "detail": "Cut yarn, use needle to close the remaining hole.", "media": "assets/finish.gif"},
-      {"text": "Make Body (Start Magic Ring).", "detail": "Repeat Rounds 1-4 of head to start body.", "media": "assets/magic-ring.gif"},
-      {"text": "Sew Head to Body.", "detail": "Use yarn needle to stitch the head securely to the body.", "media": "assets/sew.gif"}
+      {"text": "Create Magic Ring", "detail": "Wrap yarn around finger twice, pull up loop, ch 1.", "media": "assets/magic-ring.gif"},
+      {"text": "R1: 6 SC in Ring", "detail": "Work 6 single crochets into the center loop. Pull tight.", "media": null},
+      {"text": "R2: Increase around", "detail": "2 SC in every stitch (Total 12).", "media": null},
+      {"text": "R3: (1 SC, Inc)", "detail": "Repeat pattern around (Total 18).", "media": null},
+      {"text": "R4: (2 SC, Inc)", "detail": "Repeat pattern around (Total 24).", "media": null},
+      {"text": "R5-8: SC around", "detail": "Work even rows to build height.", "media": null},
+      {"text": "Insert Eyes", "detail": "Place safety eyes between R6 and R7.", "media": null},
+      {"text": "R9: (2 SC, Dec)", "detail": "Start closing the head (Total 18).", "media": null},
+      {"text": "Stuff Head", "detail": "Fill firmly with polyester fiberfill.", "media": null},
+      {"text": "R10: Decrease around", "detail": "Dec in every stitch until closed.", "media": null}
     ]
   },
   {
@@ -35,23 +29,22 @@
     "name": "Sunflower Coaster",
     "image": "sunflower.jpg",
     "difficulty": "Beginner",
-    "category": "Home Decor",
+    "category": "Decor",
     "details": {
       "time": "45 Minutes",
-      "materials": ["Brown Yarn (Center)", "Yellow Yarn (Petals)", "Cotton Yarn"],
+      "materials": ["Brown Yarn", "Yellow Yarn", "Cotton Yarn"],
       "tools": ["4.0mm Hook", "Scissors"],
-      "techniques": ["Double Crochet (dc)", "Slip Stitch (sl st)", "Chain (ch)"]
+      "techniques": ["Double Crochet (dc)", "Chain (ch)", "Slip Stitch"]
     },
     "steps": [
-      {"text": "Start with Brown Yarn: Magic Ring.", "detail": "Create loop, ch 3 (counts as first DC).", "media": "assets/magic-ring.gif"},
-      {"text": "Round 1: 11 DC into ring.", "detail": "Double crochet 11 times. Join with sl st to top of ch 3. Total: 12.", "media": "assets/dc.gif"},
-      {"text": "Round 2: Increase (2 DC) in each st.", "detail": "Chain 3, DC in same st. 2 DC in each st around. Total: 24.", "media": "assets/dc.gif"},
-      {"text": "Switch to Yellow Yarn.", "detail": "Fasten off brown. Attach yellow yarn to any stitch.", "media": "assets/change-color.gif"},
-      {"text": "Start Petal: Chain 2.", "detail": "Ch 2, DC in same stitch.", "media": "assets/chain.gif"},
-      {"text": "Form Tip: Chain 2, Sl st in 2nd ch.", "detail": "This creates the pointy 'picot' top of the petal.", "media": "assets/picot.gif"},
-      {"text": "Finish Petal: DC in next st, Ch 2, Sl st.", "detail": "DC in next st, ch 2, slip stitch in same st base.", "media": "assets/slst.gif"},
-      {"text": "Repeat Petal pattern around.", "detail": "Make 12 petals total around the circle.", "media": "assets/petal.gif"},
-      {"text": "Fasten off.", "detail": "Cut yarn and weave in all ends.", "media": "assets/finish.gif"}
+      {"text": "Brown: Magic Ring", "detail": "Start with brown yarn, create loop.", "media": null},
+      {"text": "R1: 12 DC in Ring", "detail": "Chain 3 (counts as DC), work 11 DC.", "media": null},
+      {"text": "R2: 2 DC in each", "detail": "Increase in every stitch (Total 24).", "media": null},
+      {"text": "Switch to Yellow", "detail": "Fasten off brown, attach yellow.", "media": null},
+      {"text": "Petal: Ch 2, DC, Ch 2", "detail": "Create the first petal shape.", "media": null},
+      {"text": "Sl St to finish petal", "detail": "Anchor the petal to the base.", "media": null},
+      {"text": "Repeat around", "detail": "Make 12 petals total.", "media": null},
+      {"text": "Weave ends", "detail": "Hide all loose yarn tails.", "media": null}
     ]
   },
   {
@@ -61,26 +54,258 @@
     "difficulty": "Easy",
     "category": "Plushie",
     "details": {
-      "time": "1.5 Hours",
-      "materials": ["Yellow Velvet Yarn", "Black Velvet Yarn", "White Felt (Wings)"],
-      "tools": ["5.5mm Hook (Chunky)", "Large Eye Needle"],
+      "time": "1 Hour",
+      "materials": ["Yellow Velvet Yarn", "Black Velvet Yarn", "White Felt"],
+      "tools": ["5.5mm Hook", "Yarn Needle"],
       "techniques": ["Color Change", "SC", "Inc", "Dec"]
     },
     "steps": [
-      {"text": "Yellow: Magic Ring 6 SC.", "detail": "Start with yellow yarn.", "media": "assets/magic-ring.gif"},
-      {"text": "Row 2: Increase around (12).", "detail": "2 SC in each stitch.", "media": "assets/inc.gif"},
-      {"text": "Row 3: (1 SC, Inc) around (18).", "detail": "Standard increase circle.", "media": "assets/inc.gif"},
-      {"text": "Row 4: (2 SC, Inc) around (24).", "detail": "Circle gets wider.", "media": "assets/inc.gif"},
-      {"text": "Change to Black Yarn.", "detail": "Switch colors for the stripe.", "media": "assets/change-color.gif"},
-      {"text": "Row 5-6: SC around in Black.", "detail": "2 rows of black stitches.", "media": "assets/sc.gif"},
-      {"text": "Change to Yellow Yarn.", "detail": "Switch back to yellow.", "media": "assets/change-color.gif"},
-      {"text": "Row 7-8: SC around in Yellow.", "detail": "2 rows of yellow.", "media": "assets/sc.gif"},
-      {"text": "Change to Black Yarn.", "detail": "Second stripe.", "media": "assets/change-color.gif"},
-      {"text": "Row 9-10: SC around in Black.", "detail": "2 rows of black.", "media": "assets/sc.gif"},
-      {"text": "Change to Yellow. Insert Eyes.", "detail": "Put eyes in the first yellow section.", "media": "assets/eyes.jpg"},
-      {"text": "Row 11: Decrease (2 SC, Dec).", "detail": "Start closing the body.", "media": "assets/dec.gif"},
-      {"text": "Row 12: Decrease (1 SC, Dec).", "detail": "Stuff firmly now.", "media": "assets/stuffing.jpg"},
-      {"text": "Row 13: Dec around. Close hole.", "detail": "Sew shut.", "media": "assets/finish.gif"}
+      {"text": "Yellow: 6 SC in MR", "detail": "Start with Magic Ring.", "media": null},
+      {"text": "R2: Inc around (12)", "detail": "2 SC in each stitch.", "media": null},
+      {"text": "R3: (1 SC, Inc)", "detail": "Total 18 stitches.", "media": null},
+      {"text": "Change to Black", "detail": "Switch colors for stripe.", "media": null},
+      {"text": "R4-5: SC around", "detail": "Black stripe rows.", "media": null},
+      {"text": "Change to Yellow", "detail": "Switch back to yellow.", "media": null},
+      {"text": "R6-7: SC around", "detail": "Yellow body rows.", "media": null},
+      {"text": "Decrease & Close", "detail": "Stuff and sew shut.", "media": null}
+    ]
+  },
+  {
+    "id": "octopus",
+    "name": "Reversible Octopus",
+    "image": "octopus.jpg",
+    "difficulty": "Hard",
+    "category": "Toys",
+    "details": {
+      "time": "3 Hours",
+      "materials": ["Blue Yarn", "Pink Yarn", "Stuffing"],
+      "tools": ["3.5mm Hook", "Scissors"],
+      "techniques": ["Front Loop Only", "Back Loop Only", "Sewing"]
+    },
+    "steps": [
+      {"text": "Make Side A (Blue)", "detail": "Follow standard ball pattern for head.", "media": null},
+      {"text": "Make Tentacles", "detail": "Ch 6, SC back down, repeat 8 times.", "media": null},
+      {"text": "Make Side B (Pink)", "detail": "Repeat head pattern in pink.", "media": null},
+      {"text": "Connect Sides", "detail": "Place wrong sides together.", "media": null},
+      {"text": "Sew edges", "detail": "Stitch around the bottom rim.", "media": null}
+    ]
+  },
+  {
+    "id": "heart",
+    "name": "Amigurumi Heart",
+    "image": "heart.jpg",
+    "difficulty": "Beginner",
+    "category": "Decor",
+    "details": {
+      "time": "30 Minutes",
+      "materials": ["Red Yarn", "Stuffing"],
+      "tools": ["3.0mm Hook"],
+      "techniques": ["Magic Ring", "SC", "Dec"]
+    },
+    "steps": [
+      {"text": "Make Dome 1", "detail": "6 SC in MR, Inc to 12, Fasten off.", "media": null},
+      {"text": "Make Dome 2", "detail": "Same as Dome 1, do not fasten off.", "media": null},
+      {"text": "Join Domes", "detail": "SC into Dome 1 to connect.", "media": null},
+      {"text": "SC around both", "detail": "Work around the combined shape.", "media": null},
+      {"text": "Decrease Rounds", "detail": "Dec at sides to form point.", "media": null},
+      {"text": "Close point", "detail": "Sew the bottom tip shut.", "media": null}
+    ]
+  },
+  {
+    "id": "granny-square",
+    "name": "Classic Granny Square",
+    "image": "granny.jpg",
+    "difficulty": "Beginner",
+    "category": "Blankets",
+    "details": {
+      "time": "20 Minutes",
+      "materials": ["3 Colors of Yarn"],
+      "tools": ["4.5mm Hook"],
+      "techniques": ["DC", "Chain", "Clusters"]
+    },
+    "steps": [
+      {"text": "Ch 4, Join to ring", "detail": "Form small center ring.", "media": null},
+      {"text": "R1: 3 DC clusters", "detail": "Ch 3, 2 DC, Ch 2, 3 DC... repeat 4 times.", "media": null},
+      {"text": "Change Color", "detail": "Join new yarn in corner space.", "media": null},
+      {"text": "R2: Corners", "detail": "3 DC, Ch 2, 3 DC in each corner.", "media": null},
+      {"text": "Fasten Off", "detail": "Weave in ends.", "media": null}
+    ]
+  },
+  {
+    "id": "purse",
+    "name": "Boho Sling Bag",
+    "image": "purse.jpg",
+    "difficulty": "Intermediate",
+    "category": "Accessories",
+    "details": {
+      "time": "6 Hours",
+      "materials": ["Cotton Cord", "Button"],
+      "tools": ["5.0mm Hook"],
+      "techniques": ["HDC", "Star Stitch"]
+    },
+    "steps": [
+      {"text": "Chain 30", "detail": "Base chain for width.", "media": null},
+      {"text": "HDC Rows", "detail": "Work back and forth for 40 rows.", "media": null},
+      {"text": "Fold & Seam", "detail": "Fold rectangle, sew sides.", "media": null},
+      {"text": "Add Strap", "detail": "Chain 100, SC back, attach.", "media": null}
+    ]
+  },
+  {
+    "id": "cactus",
+    "name": "Mini Potted Cactus",
+    "image": "cactus.jpg",
+    "difficulty": "Easy",
+    "category": "Decor",
+    "details": {
+      "time": "1.5 Hours",
+      "materials": ["Green Yarn", "Brown Yarn", "Tiny Pot"],
+      "tools": ["2.5mm Hook"],
+      "techniques": ["Ribbing", "SC"]
+    },
+    "steps": [
+      {"text": "Make Soil", "detail": "Brown ball to fit pot.", "media": null},
+      {"text": "Make Cactus Body", "detail": "Ch 15, SC in BLO (ribbing).", "media": null},
+      {"text": "Sew Tube", "detail": "Stitch side to form cylinder.", "media": null},
+      {"text": "Cinch Top", "detail": "Pull yarn tight to close top.", "media": null},
+      {"text": "Assemble", "detail": "Sew cactus to soil.", "media": null}
+    ]
+  },
+  {
+    "id": "whale",
+    "name": "Tiny Whale",
+    "image": "whale.jpg",
+    "difficulty": "Easy",
+    "category": "Toys",
+    "details": {
+      "time": "45 Minutes",
+      "materials": ["Blue Yarn", "Safety Eyes"],
+      "tools": ["3.5mm Hook"],
+      "techniques": ["Round Knitting"]
+    },
+    "steps": [
+      {"text": "Body: 6 SC in MR", "detail": "Start round body.", "media": null},
+      {"text": "Increase to 24", "detail": "Standard increase pattern.", "media": null},
+      {"text": "SC even rounds", "detail": "Build body length.", "media": null},
+      {"text": "Tail Fins", "detail": "Ch 4 off back, SC down.", "media": null},
+      {"text": "Close bottom", "detail": "Decrease until shut.", "media": null}
+    ]
+  },
+  {
+    "id": "headband",
+    "name": "Twisted Ear Warmer",
+    "image": "headband.jpg",
+    "difficulty": "Beginner",
+    "category": "Wearables",
+    "details": {
+      "time": "2 Hours",
+      "materials": ["Chunky Wool"],
+      "tools": ["6.0mm Hook"],
+      "techniques": ["HDC", "Sewing Twist"]
+    },
+    "steps": [
+      {"text": "Chain 15", "detail": "Width of headband.", "media": null},
+      {"text": "HDC for 20 inches", "detail": "Length of head circumference.", "media": null},
+      {"text": "Twist Fold", "detail": "Fold ends together in 'C' shape.", "media": null},
+      {"text": "Seam Twist", "detail": "Sew through all 4 layers.", "media": null},
+      {"text": "Turn Inside Out", "detail": "Reveal the twist.", "media": null}
+    ]
+  },
+  {
+    "id": "mushroom",
+    "name": "Fairy Mushroom",
+    "image": "mushroom.jpg",
+    "difficulty": "Easy",
+    "category": "Decor",
+    "details": {
+      "time": "1 Hour",
+      "materials": ["Red Yarn", "White Yarn"],
+      "tools": ["3.0mm Hook"],
+      "techniques": ["Color Change"]
+    },
+    "steps": [
+      {"text": "Stem: White Yarn", "detail": "Tube shape, 6 SC in MR.", "media": null},
+      {"text": "Cap: Red Yarn", "detail": "6 SC in MR, Inc to 24.", "media": null},
+      {"text": "Add Spots", "detail": "Sew white French knots on cap.", "media": null},
+      {"text": "Join Parts", "detail": "Sew cap to stem.", "media": null}
+    ]
+  },
+  {
+    "id": "beanie",
+    "name": "Winter Beanie",
+    "image": "beanie.jpg",
+    "difficulty": "Intermediate",
+    "category": "Wearables",
+    "details": {
+      "time": "3 Hours",
+      "materials": ["Acrylic Yarn", "Pom Pom"],
+      "tools": ["5.0mm Hook"],
+      "techniques": ["BLO", "Slip Stitch"]
+    },
+    "steps": [
+      {"text": "Make Brim", "detail": "Ch 10, SC BLO for 20 inches.", "media": null},
+      {"text": "Join Brim", "detail": "Sl st ends together.", "media": null},
+      {"text": "Body: DC around", "detail": "Work upwards from brim.", "media": null},
+      {"text": "Decrease Crown", "detail": "Dec every 5th stitch.", "media": null},
+      {"text": "Attach Pom Pom", "detail": "Sew to top.", "media": null}
+    ]
+  },
+  {
+    "id": "turtle",
+    "name": "Sea Turtle",
+    "image": "turtle.jpg",
+    "difficulty": "Intermediate",
+    "category": "Toys",
+    "details": {
+      "time": "2 Hours",
+      "materials": ["Green Yarn", "Brown Yarn"],
+      "tools": ["3.5mm Hook"],
+      "techniques": ["Shell Stitch"]
+    },
+    "steps": [
+      {"text": "Shell: Brown Yarn", "detail": "Dome shape (Inc to 30).", "media": null},
+      {"text": "Belly: Green Yarn", "detail": "Flat circle (Inc to 30).", "media": null},
+      {"text": "Legs (x4)", "detail": "Small tubes.", "media": null},
+      {"text": "Head", "detail": "Ball shape.", "media": null},
+      {"text": "Assemble", "detail": "Sandwich legs between shell/belly.", "media": null}
+    ]
+  },
+  {
+    "id": "scarf",
+    "name": "Infinity Scarf",
+    "image": "scarf.jpg",
+    "difficulty": "Beginner",
+    "category": "Wearables",
+    "details": {
+      "time": "5 Hours",
+      "materials": ["Soft Wool (3 Skeins)"],
+      "tools": ["6.5mm Hook"],
+      "techniques": ["DC", "V-Stitch"]
+    },
+    "steps": [
+      {"text": "Chain 200", "detail": "Long loop.", "media": null},
+      {"text": "Join Round", "detail": "Be careful not to twist.", "media": null},
+      {"text": "DC Around", "detail": "Keep going in spirals.", "media": null},
+      {"text": "Fasten Off", "detail": "When width is 10 inches.", "media": null}
+    ]
+  },
+  {
+    "id": "basket",
+    "name": "Yarn Basket",
+    "image": "basket.jpg",
+    "difficulty": "Easy",
+    "category": "Home",
+    "details": {
+      "time": "2 Hours",
+      "materials": ["T-Shirt Yarn"],
+      "tools": ["10mm Hook"],
+      "techniques": ["SC", "Reverse SC"]
+    },
+    "steps": [
+      {"text": "Base: Flat Circle", "detail": "Inc to 40 stitches.", "media": null},
+      {"text": "Sides: BLO SC", "detail": "Work up without increasing.", "media": null},
+      {"text": "Handles", "detail": "Ch 10, skip 10 stitches.", "media": null},
+      {"text": "Rim", "detail": "Reverse SC for strength.", "media": null}
     ]
   }
-        ]
+      ]
+      
