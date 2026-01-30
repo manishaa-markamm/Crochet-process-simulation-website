@@ -1,0 +1,170 @@
+/* --- RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #FFF5F0; /* Your signature soft pink/peach */
+    overflow-x: hidden; /* Prevents scrollbar from the blobs */
+    height: 100vh;
+    position: relative;
+}
+
+/* --- NAVIGATION --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #2D6A86; /* A nice teal blue for contrast */
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #E67E22;
+}
+
+.search-icon img {
+    height: 20px;
+    opacity: 0.6;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    height: 80vh; /* Takes up most of the screen */
+    position: relative;
+    z-index: 5;
+}
+
+/* Left Side Text */
+.hero-text {
+    flex: 1;
+    z-index: 5;
+}
+
+.subtitle {
+    letter-spacing: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #555;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 400; /* Thin but big */
+    margin-bottom: 20px;
+    color: #000;
+    line-height: 1;
+}
+
+.description {
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    font-family: monospace; /* Gives that "typewriter" vibe from your design */
+}
+
+.explore-btn {
+    padding: 12px 30px;
+    border: 2px solid #333; /* Outline style */
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+.explore-btn:hover {
+    background: #333;
+    color: white;
+}
+
+/* Right Side Visual */
+.hero-visual {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 450px;
+    z-index: 2;
+    position: relative;
+}
+
+/* --- BACKGROUND SHAPES (The Blobs) --- */
+.blob-left {
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+    width: 50vw;
+    height: 50vw;
+    background-color: #F8D7C8; /* Darker peach */
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.blob-right {
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 60vw;
+    height: 60vw;
+    background-color: #F8D7C8;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse; /* Image on top, text below */
+        justify-content: center;
+        text-align: center;
+        height: auto;
+        padding-top: 50px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .nav-links {
+        display: none; /* Hide menu links on mobile for simplicity */
+    }
+
+    .blob-left, .blob-right {
+        opacity: 0.5;
+    }
+}
