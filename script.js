@@ -81,12 +81,15 @@ async function loadPatternDetails() {
         
         // Fill Lists (Materials, Tools, Techniques)
         const matList = document.getElementById('p-materials');
+        matList.innerHTML = ''; // Clear previous
         item.details.materials.forEach(m => matList.innerHTML += `<li>${m}</li>`);
 
         const toolList = document.getElementById('p-tools');
+        toolList.innerHTML = ''; // Clear previous
         item.details.tools.forEach(t => toolList.innerHTML += `<li>${t}</li>`);
 
         const techDiv = document.getElementById('p-techs');
+        techDiv.innerHTML = ''; // Clear previous
         item.details.techniques.forEach(t => techDiv.innerHTML += `<span>${t}</span>`);
 
         // Enable "Start" Button
@@ -132,32 +135,33 @@ function updateStepDisplay() {
     document.getElementById('step-instruction').innerText = step.text;
     document.getElementById('step-detail').innerText = step.detail;
     
-    // 2. SMART MEDIA HANDLER (Video vs Image)
-    const mediaFile = step.media ? step.media : currentItem.image; // Fallback
+    // 2. SMART MEDIA HANDLER (Video vs Image Switcher)
+    const mediaFile = step.media ? step.media : currentItem.image; // Fallback to main image
     const imgEl = document.getElementById('step-image');
     const videoEl = document.getElementById('step-video');
 
-    // Check if the file is a video
-    if (mediaFile.endsWith('.mp4') || mediaFile.endsWith('.webm')) {
-        // It is a VIDEO
-        imgEl.style.display = 'none';      // Hide Image
-        videoEl.style.display = 'block';   // Show Video
-        videoEl.src = mediaFile;           // Load Video
+    // Check if the file is a VIDEO (.mp4)
+    if (mediaFile.endsWith('.mp4')) {
+        // HIDE Image, SHOW Video
+        imgEl.style.display = 'none';
+        videoEl.style.display = 'block';
+        videoEl.src = mediaFile;
     } else {
-        // It is an IMAGE or GIF
-        videoEl.style.display = 'none';    // Hide Video
-        videoEl.pause();                   // Stop any playing video
-        imgEl.style.display = 'block';     // Show Image
-        imgEl.src = mediaFile;             // Load Image
+        // HIDE Video, SHOW Image
+        videoEl.style.display = 'none';
+        videoEl.pause(); // Stop playing if switched
+        imgEl.style.display = 'block';
+        imgEl.src = mediaFile;
     }
 
     // 3. Linear Progress Bar
     const percent = ((currentStep + 1) / total) * 100;
     document.getElementById('progress-fill').style.width = `${percent}%`;
 
-    // 4. Circular Graph
+    // 4. CIRCULAR GRAPH (Advanced Conic Gradient)
     const chart = document.getElementById('chart-circle');
-    chart.style.background = `conic-gradient(#FF8E53 ${percent}%, #eee ${percent}% 100%)`; // Orange fill
+    // This creates the "Pie Chart" effect dynamically
+    chart.style.background = `conic-gradient(#FF8E53 ${percent}%, #eee ${percent}% 100%)`;
     document.getElementById('percent-text').innerText = `${Math.round(percent)}%`;
 
     // 5. Button Logic
@@ -175,7 +179,6 @@ function updateStepDisplay() {
         nextBtn.onclick = nextStep;
     }
 }
-
 
 function nextStep() {
     if (currentItem && currentStep < currentItem.steps.length - 1) {
@@ -202,4 +205,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.getElementById('btn-prev');
     if (prevBtn) prevBtn.addEventListener('click', prevStep);
 });
-            
+                      
