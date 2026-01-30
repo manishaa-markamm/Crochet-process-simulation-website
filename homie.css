@@ -74,6 +74,9 @@ body {
     color: #FFF4EC !important;
     
 }
+.explore-header p {
+    color:#f6f6f6 !important;
+}
 
 /* --- SEARCH BAR --- */
 .search-wrapper {
@@ -242,6 +245,7 @@ footer {
     
     .explore-header h1 { font-size: 1.8rem; }
     }
+
 
 
 
