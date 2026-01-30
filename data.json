@@ -25,27 +25,29 @@
     ]
   },
   {
-    "id": "sunflower",
-    "name": "Sunflower Coaster",
-    "image": "sunflower.jpg",
+    "id": "heart",
+    "name": "Heart",
+    "image": "heart.jpg",
     "difficulty": "Beginner",
-    "category": "Decor",
+    "category": "gift",
     "details": {
-      "time": "45 Minutes",
-      "materials": ["Brown Yarn", "Yellow Yarn", "Cotton Yarn"],
-      "tools": ["4.0mm Hook", "Scissors"],
-      "techniques": ["Double Crochet (dc)", "Chain (ch)", "Slip Stitch"]
+      "time": "20 Minutes",
+      "materials": ["Pink Yarn"],
+      "tools": ["4.0mm Hook", "Scissors", "Cotton", "Needle", "Stich marker"],
+      "techniques": ["MC", "Inc", "Sc", "Dec"]
     },
     "steps": [
-      {"text": "Brown: Magic Ring", "detail": "Start with brown yarn, create loop.", "media": null},
-      {"text": "R1: 12 DC in Ring", "detail": "Chain 3 (counts as DC), work 11 DC.", "media": null},
-      {"text": "R2: 2 DC in each", "detail": "Increase in every stitch (Total 24).", "media": null},
-      {"text": "Switch to Yellow", "detail": "Fasten off brown, attach yellow.", "media": null},
-      {"text": "Petal: Ch 2, DC, Ch 2", "detail": "Create the first petal shape.", "media": null},
-      {"text": "Sl St to finish petal", "detail": "Anchor the petal to the base.", "media": null},
-      {"text": "Repeat around", "detail": "Make 12 petals total.", "media": null},
-      {"text": "Weave ends", "detail": "Hide all loose yarn tails.", "media": null}
-    ]
+      {"text": "MC - 6xsc into mc", "detail": "Create a Magic Circle (MC) and work 6 single crochet (sc) stitches into it, resulting in a total of (6) stitches", "media": "assets/heart1.mp4"},
+      {"text": "Inc in each st around", "detail": "Increase (inc) in each stitch around, which means placing two single crochets in the same stitch.This round will end with (12)stitches.", "media": "assets/heart2.mp4"},
+      {"text": "sc in each st around", "detail": "sc in each stitch around..", "media": "assets/heart3.mp4"},
+      {"text": "sc in each st around", "detail": "maintaining a constant stitch count of (12).. You will need to make two of these pieces.", "media": "assets/heart4.mp4"},
+      {"text": "sc in each st around", "detail": "This round combines the two pieces. Make 6 single crochets in the first piece, then 12 single crochets in the second piece, and finally 6 single crochets in the remaining 6 stitches of the first piece. This will result in (24) stitches", "media": "assets/heart5.mp4"},
+      {"text": "(sc in next 2st, dec) x6", "detail": "This is a decreasing round. Repeat the pattern of (single crochet in the next 2 stitches, invisible decrease) 6 times. You will end with (18) stitches.", "media": "assets/heart6.mp4"},
+      {"text": "sc in each st around", "detail": "Single crochet (sc) in each stitch around, keeping the stitch count constant at (18).", "media": "assets/heart7.mp4"},
+      {"text": "(sc in next st, dec) x6", "detail": "Repeat the pattern of (single crochet in the next stitch, invisible decrease) 6 times. This round will end with (12) stitches.", "media": "assets/heart8.mp4"}
+      {"text": "sc in each st around", "detail": "Single crochet (sc) in each stitch around, maintaining a constant stitch count of (12). At this point, you should stuff the piece", "media": "assets/heart9.mp4"},
+      {"text": "dec in each st around", "detail": "Decrease (dec) in each stitch around. This round will result in (6) stitches. After this, fasten off and sew the hole closed", "media": "assets/heart10.mp4"}
+  ]
   },
   {
     "id": "bee",
