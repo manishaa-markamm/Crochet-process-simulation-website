@@ -1,220 +1,185 @@
-*{
+/* --- RESET & FONTS --- */
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
-}
-body{
-    background-color:#FFF4EC ;
-}
-.parent{
-    height: 60px;
-    width: 100%;
-    background-color: #f3cbb9;
-}
-.parent p{
-    text-align: center;
-    font-size:22px;
-    padding-top:15px;  
-}
-.container{
-    display: grid;
-    Grid-template-columns:390px 390px 390px;
-Grid-template-rows: 600px;
-gap: 1.5em;
-justify-content: center;
-}
-.box{
-    background-color:white;
-    position: relative;
-}
-.child1{
-    height: 200px;
-    width: 300px;
-    position: relative;
-    top:45px;
-    left:42px;
-}
-.child1{
-    background-image: url(teddy.jpg);
-    background-size: cover;
-    height: 350px;
+    font-family: 'Poppins', sans-serif;
 }
 
-.txt{
-    font-size: 35px;
-    font-weight: 600;
-    color: rgb(16, 15, 15);
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    position: absolute;
-    top: 370px;
-}
-.txt1{
-    position: absolute;
-    top:430px;
-    left:55px;
-    font-weight: 400;
-    font-size: 20px;
-}
-.btn{
-    position: absolute;
-    top:490px;
-    left:80px;
-    height: 40px;
-    width:140px;
-    border-radius: 9px;
-    background-color: #f3cbb9;
-    text-decoration:none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.btn a{
-    text-decoration: none;
-}
-.child2{
-    position: relative;
-    height: 440px;
-    width: auto;
-}
-.txt3{
-    position: absolute;
-    top:10px;
-    left:125px;
-    text-align: center;
-    font-size: 20px;
-}
-.child2{
-    height: 350px;
-    width: auto;
-    position: relative;
-}
-.process{
-    position: absolute;
-    left:40px;
-    top: 39px;
-    background-image: url(bear.jpg);
-    background-size: cover;
-    height:350px;
-    width: 310px;
-    justify-items: center;
-}
-.child2 button{
-    position: absolute;
-    top: 410px;
-    left: 110px;
-    border-radius: 9px;
-    background-color: #f3cbb9;
-    height: 40px;
-    width:140px;
-
-}
-.child3{
-    position: relative;
-    height: 45px;
-    width: auto;
-}
-.child3 p{
-    position: absolute;
-    top: 110px;
-    left:104px;
-    font-size: 18px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.child4{
-    position: relative;
-    height: 45px;
-    width: auto;
-}
-.child4 p{
-    position: absolute;
-    top:110px;
-    left: 120px;
-    height:92px;
-    width:92px;
-    border:5px solid #ddd ;
-    border-top:5px solid #000 ;
-    border-right:5px solid #000 ;
-     border-bottom:5px solid #000 ;
-    border-radius: 50%;
-}
-.circle{
-    position: relative;
-    height: 110px;
-    width: auto;
-}
-.circle percentage{
-    position: absolute;
-    top: 330px;
-}
-.parent-equipment{
+body {
+    background-color: #f4f7f6; /* Very light grey for focus */
+    color: #333;
+    height: 100vh; /* Full screen height */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-radius: 3px;
-    height: 600px;
-    
-}
-.equipment{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-}
-.equip1{
-    height:7.5%;
-    
-}
-.equip2{
-    height: 35%;
-    width: auto;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    background: url('https://images.squarespace-cdn.com/content/v1/619f84ab2ac7c539ead91ff9/5997a140-bf68-4376-8e59-82a26d869833/how-to-hold-yarn-when-crocheting.jpg');
-    background-size: cover;
-}
-.equip3{
-    height:10.8%;
-    
 }
 
-.equip4{
-    height:35%;
-    width: auto;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzTguUANoI3Cc5caAJ72QL2jCiZ377PgsobhSjaw3rxPqUAbnfsFIxiJw&s=10');
-    background-size: cover;
+/* --- NAV (Simplified) --- */
+.navbar {
+    background: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    flex-shrink: 0;
 }
-.equip5{
-    height: 15%;
-    width: 170px;
-    
+
+.navbar span {
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9rem;
 }
-.span1{
+
+/* --- DASHBOARD LAYOUT --- */
+.dashboard-container {
+    flex-grow: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tut-header {
+    margin-bottom: 20px;
     text-align: center;
-    font-family: verdana;
-    text-transform: uppercase;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size:  18px;
 }
-.equip3{
+
+.tut-header h1 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+}
+
+#step-count {
+    color: #888;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* --- WORKSPACE (The Split Screen) --- */
+.workspace {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 50% Left, 50% Right */
+    gap: 30px;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    height: 100%;
+    min-height: 400px;
+}
+
+/* LEFT SIDE: Visuals */
+.visual-box {
+    background-color: #FFE4D6; /* Soft peach background */
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     position: relative;
 }
-.nextstep{
-    position: absolute;
-    top: 290px;
-    left:160px;
-    border-radius: 5px;
-    background-color: #f3cbb9;
-    height:15px;
-    width: 90px;
-    font-size:9px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.title{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    position: absolute;
-    top: -30px;
-    left:80px;
-    font-size:21px;
+
+.visual-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
 }
 
+/* RIGHT SIDE: Instructions */
+.instruction-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.text-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.detail-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* --- CONTROLS --- */
+.control-panel {
+    margin-top: 30px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #eee;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    width: 0%; /* JS changes this */
+    height: 100%;
+    background-color: #E67E22; /* Burnt Orange */
+    transition: width 0.3s ease;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.btn.primary {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: #34495e;
+}
+
+.btn.secondary {
+    background-color: #e0e0e0;
+    color: #555;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* --- RESPONSIVE (Mobile) --- */
+@media (max-width: 768px) {
+    .workspace {
+        grid-template-columns: 1fr; /* Stack visually */
+        height: auto;
+    }
+
+    .visual-box {
+        height: 250px; /* Fixed height for image on phone */
+    }
+
+    .dashboard-container {
+        padding: 10px;
+    }
+
+    .tut-header h1 {
+        font-size: 1.4rem;
+    }
+    }
