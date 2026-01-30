@@ -1,0 +1,60 @@
+[
+  {
+    "id": "teddy",
+    "name": "Cute Teddy Bear",
+    "image": "teddy.jpg",
+    "difficulty": "Medium",
+    "description": "A soft, cuddly bear perfect for beginners.",
+    "steps": [
+      {
+        "text": "Start with a Magic Ring.",
+        "detail": "Wrap the yarn around your finger twice and secure with a chain.",
+        "media": "assets/magic-ring.gif"
+      },
+      {
+        "text": "Single Crochet 6 times.",
+        "detail": "Insert hook into the ring, pull up a loop, yarn over and pull through.",
+        "media": "assets/single-crochet.gif"
+      },
+      {
+        "text": "Increase stitches to 12.",
+        "detail": "Do two single crochets in every stitch around the circle.",
+        "media": "assets/increase.gif"
+      }
+    ]
+  },
+  {
+    "id": "sunflower",
+    "name": "Sunflower Purse",
+    "image": "purseee.jpg",
+    "difficulty": "Hard",
+    "description": "A stylish boho purse with a sunflower motif.",
+    "steps": [
+      {
+        "text": "Chain 20 stitches.",
+        "detail": "Create a slip knot and chain 20 to start the base.",
+        "media": "assets/chain.gif"
+      },
+      {
+        "text": "Double Crochet row.",
+        "detail": "Work one double crochet into each chain stitch.",
+        "media": "assets/double-crochet.gif"
+      }
+    ]
+  },
+  {
+    "id": "bunny",
+    "name": "Curtain Bunny",
+    "image": "bunny.jpg",
+    "difficulty": "Easy",
+    "description": "A cute bunny that hugs your curtains.",
+    "steps": [
+      {
+        "text": "Chain 10 for ears.",
+        "detail": "Start with the long ears using simple chains.",
+        "media": "assets/chain.gif"
+      }
+    ]
+  }
+]
+
