@@ -47,7 +47,43 @@
                     </div>
                 </div>
             </div>
+<div class="dashboard-container">
+    
+    <header class="tut-header">
+        <h1 id="tut-title">Loading...</h1>
+        <div class="progress-stats">
+            <div class="circular-chart" id="chart-circle" style="background: conic-gradient(#E67E22 0%, #eee 0%);">
+                <span id="percent-text">0%</span>
+            </div>
+            <p>Overall Completion</p>
+        </div>
+    </header>
 
+    <main class="workspace">
+        <div class="visual-box">
+            <img id="step-media" src="" alt="Visual">
+        </div>
+
+        <div class="instruction-box">
+            <div class="text-content">
+                <div class="step-badge" id="step-count">Step 1</div>
+                <h2 id="step-instruction">...</h2>
+                <p id="step-detail" class="detail-text">...</p>
+            </div>
+
+            <div class="control-panel">
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+                <div class="buttons">
+                    <button id="btn-prev" class="btn secondary" disabled>Prev</button>
+                    <button id="btn-next" class="btn primary">Next Step</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+            
         </main>
     </div>
 
@@ -55,3 +91,4 @@
 </body>
                 </html>
     
+
