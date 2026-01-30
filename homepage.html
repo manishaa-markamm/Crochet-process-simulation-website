@@ -3,71 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Explore Crafts | CraftStep</title>
     <link rel="stylesheet" href="homie.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div id="box" class="container">
-        <img id="logo" src="logo.png">
 
-        <div id="search">
-            <input type="text" placeholder="Search Here Craftie">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="CraftStep Logo">
+            <span>CraftStep</span>
         </div>
-            <img id ="icon"src="searcicon.png">
-
-
-    </div>
-     </header>  
-     <div id="dibba" class="container1">
-        <ul>
-            <li>CREATE BEAUTIFUL CROCHET CRAFTS</li>
-            <li id="text">Learn crochet step-by-step with easy tutorials, patterns, and real project guidance.</li>
-            <li id="herotxt">No rush. No pressure. Just yarn and progress.</li>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="homepage.html" class="active">Explore</a></li>
+            <li><a href="#" class="signup-btn">Sign Up</a></li>
         </ul>
-    
-     </div>
-     <!-- <div class="stepbox">
-        <h1>WHAT IS CRAFTSTEP</h1>
-        <P><pre>
-    CraftStep is an interactive craft learning website where
-    users can explore crochet and handmade craft tutorials in a structured, 
-    step-by-step format. Each craft is explained clearly using images, text, 
-    and guided steps to make learning easy for beginners.</pre></P>
-
-     </div> -->
-     <div id="parent" class="gridparent">
-     <div class="stepbox">
-         <div class="outerbox2">
-            <h3> SUNFLOWER PURSE</h3>
-            <button class="btn2">View steps</button>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
+    </nav>
 
-     </div>
-     <div class="stepbox">
-    <div class="outerbox">
+    <header class="explore-header">
+        <h1>Create Beautiful Crochet Crafts</h1>
+        <p>Learn step-by-step with easy tutorials. No rush, just yarn and progress.</p>
         
-        <h3>BIRD WITH SUNFLOWER</h2>
-        <!-- <p>beginner</p> -->
-        <!-- <p><time datetime="PT2H3OM">30mintues></time></p> -->
-        <button class="btn"> <a class="textt" href="working.html">View steps</a></button>
+        <div class="search-wrapper">
+            <input type="text" id="search-input" placeholder="Search for patterns (e.g., Teddy, Bunny)...">
+            <button class="search-btn">
+                <img src="searcicon.png" alt="Search">
+            </button>
         </div>
-    </div>
-     <div class="stepbox">
-        <div class="outerbox1">
-            <h3>BUNNY</h3>
-            <button class="btn1">View steps</button>
-        </div>
-     </div>
-     <div class="stepbox">
-     </div>
-     <div class="stepbox"></div>
-     <div class="stepbox"></div>
-     <div class="stepbox"></div>
-     <div class="stepbox"></div>     
-     <div class="stepbox"></div>
-     </div>
+    </header>
+
+    <main>
+        <div class="card-container" id="product-list">
+            </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CraftStep. Made with 🧶 by You.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple script to toggle mobile menu
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
-
-</html>
-
+                </html>
+                
