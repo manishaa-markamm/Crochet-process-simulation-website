@@ -1,30 +1,42 @@
 const DATA_FILE = 'data.json';
 
-// --- UTILS ---
+// --- UTILITY: FETCH DATA ---
 async function fetchData() {
-    const res = await fetch(DATA_FILE);
-    return await res.json();
+    try {
+        const res = await fetch(DATA_FILE);
+        return await res.json();
+    } catch (error) {
+        console.error("Error loading data.json:", error);
+        return [];
+    }
 }
 
 // --- PAGE 1: EXPLORE (homepage.html) ---
 async function loadGallery() {
     const container = document.getElementById('product-list');
-    if (!container) return;
+    if (!container) return; // Stop if not on Explore page
 
     const data = await fetchData();
     const searchInput = document.getElementById('search-input');
 
+    // Function to draw the grid
     const render = (items) => {
         container.innerHTML = '';
+        if(items.length === 0) {
+            container.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">No patterns found matching that name.</p>';
+            return;
+        }
+
         items.forEach(item => {
-            // Note the link goes to pattern.html now, NOT working.html
             const card = `
                 <div class="card">
                     <div class="card-img" style="background-image: url('${item.image}')"></div>
                     <div class="card-info">
                         <h3>${item.name}</h3>
-                        <span class="badge">${item.difficulty}</span>
-                        <p style="font-size:0.8rem; color:#666; margin-bottom:10px;">⏱️ ${item.details.time}</p>
+                        <div style="margin-bottom:10px;">
+                            <span class="badge">${item.difficulty}</span>
+                            <span class="badge" style="background:#f0f2f5; color:#555;">${item.category}</span>
+                        </div>
                         <a href="pattern.html?id=${item.id}" class="btn-primary">View Pattern</a>
                     </div>
                 </div>
@@ -33,12 +45,18 @@ async function loadGallery() {
         });
     };
 
+    // Initial Load
     render(data);
 
+    // Search Feature
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             const term = e.target.value.toLowerCase();
-            render(data.filter(i => i.name.toLowerCase().includes(term)));
+            const filtered = data.filter(item => 
+                item.name.toLowerCase().includes(term) || 
+                item.category.toLowerCase().includes(term)
+            );
+            render(filtered);
         });
     }
 }
@@ -46,7 +64,7 @@ async function loadGallery() {
 // --- PAGE 2: PATTERN DETAILS (pattern.html) ---
 async function loadPatternDetails() {
     const title = document.getElementById('p-title');
-    if (!title) return; // Not on pattern page
+    if (!title) return; // Stop if not on Pattern page
 
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
@@ -54,12 +72,14 @@ async function loadPatternDetails() {
     const item = data.find(i => i.id === id);
 
     if (item) {
-        // Text Info
+        // Fill Text Info
         document.getElementById('p-title').innerText = item.name;
+        document.getElementById('p-difficulty').innerText = item.difficulty;
+        document.getElementById('p-category').innerText = item.category;
         document.getElementById('p-time').innerText = "⏱️ Time: " + item.details.time;
         document.getElementById('p-image').src = item.image;
         
-        // Lists
+        // Fill Lists (Materials, Tools, Techniques)
         const matList = document.getElementById('p-materials');
         item.details.materials.forEach(m => matList.innerHTML += `<li>${m}</li>`);
 
@@ -69,20 +89,22 @@ async function loadPatternDetails() {
         const techDiv = document.getElementById('p-techs');
         item.details.techniques.forEach(t => techDiv.innerHTML += `<span>${t}</span>`);
 
-        // Start Button Link
+        // Enable "Start" Button
         document.getElementById('start-tutorial-btn').onclick = () => {
             window.location.href = `working.html?id=${item.id}`;
         };
+    } else {
+        document.querySelector('.pattern-container').innerHTML = '<h2>Pattern not found!</h2>';
     }
 }
 
-// --- PAGE 3: TUTORIAL (working.html) ---
+// --- PAGE 3: TUTORIAL SIMULATION (working.html) ---
 let currentStep = 0;
 let currentItem = null;
 
 async function loadTutorial() {
     const title = document.getElementById('tut-title');
-    if (!title) return;
+    if (!title) return; // Stop if not on Working page
 
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
@@ -90,7 +112,11 @@ async function loadTutorial() {
     currentItem = data.find(i => i.id === id);
 
     if (currentItem) {
+        // Setup Header
         title.innerText = currentItem.name;
+        document.getElementById('nav-item-name').innerText = currentItem.name;
+        
+        // Load first step
         updateStepDisplay();
     }
 }
@@ -101,29 +127,35 @@ function updateStepDisplay() {
     const step = currentItem.steps[currentStep];
     const total = currentItem.steps.length;
 
-    // Text & Image
-    document.getElementById('step-count').innerText = `Step ${currentStep + 1}`;
+    // 1. Update Content
+    document.getElementById('step-count').innerText = `Step ${currentStep + 1} of ${total}`;
     document.getElementById('step-instruction').innerText = step.text;
     document.getElementById('step-detail').innerText = step.detail;
-    document.getElementById('step-media').src = step.media;
+    
+    // Image Handling (Fallback to main image if specific step media is missing)
+    const mediaEl = document.getElementById('step-media');
+    mediaEl.src = step.media ? step.media : currentItem.image;
 
-    // 1. Linear Progress Bar
+    // 2. Linear Progress Bar
     const percent = ((currentStep + 1) / total) * 100;
     document.getElementById('progress-fill').style.width = `${percent}%`;
 
-    // 2. Circular Graph (The Advanced Part)
-    // We use conic-gradient to draw the chart dynamically
+    // 3. CIRCULAR GRAPH (Advanced Conic Gradient)
     const chart = document.getElementById('chart-circle');
+    // This creates the "Pie Chart" effect dynamically
     chart.style.background = `conic-gradient(#E67E22 ${percent}%, #eee ${percent}% 100%)`;
     document.getElementById('percent-text').innerText = `${Math.round(percent)}%`;
 
-    // Buttons
+    // 4. Button Logic
     document.getElementById('btn-prev').disabled = (currentStep === 0);
     const nextBtn = document.getElementById('btn-next');
     
     if (currentStep === total - 1) {
-        nextBtn.innerText = "Finish 🎉";
-        nextBtn.onclick = () => alert("Congratulations! You finished the project!");
+        nextBtn.innerText = "Finish Pattern 🎉";
+        nextBtn.onclick = () => {
+            alert("Congratulations! You have completed the " + currentItem.name + "!");
+            window.location.href = 'homepage.html';
+        };
     } else {
         nextBtn.innerText = "Next Step";
         nextBtn.onclick = nextStep;
@@ -131,7 +163,7 @@ function updateStepDisplay() {
 }
 
 function nextStep() {
-    if (currentStep < currentItem.steps.length - 1) {
+    if (currentItem && currentStep < currentItem.steps.length - 1) {
         currentStep++;
         updateStepDisplay();
     }
@@ -144,13 +176,15 @@ function prevStep() {
     }
 }
 
-// Initializer
+// --- INITIALIZATION ---
 document.addEventListener('DOMContentLoaded', () => {
-    loadGallery();
-    loadPatternDetails();
-    loadTutorial();
+    // Check which page we are on and run the correct function
+    if (document.getElementById('product-list')) loadGallery();
+    if (document.getElementById('p-title')) loadPatternDetails();
+    if (document.getElementById('tut-title')) loadTutorial();
 
+    // Global Event Listener for Previous Button (exists on working page)
     const prevBtn = document.getElementById('btn-prev');
     if (prevBtn) prevBtn.addEventListener('click', prevStep);
 });
-                               
+            
