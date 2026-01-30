@@ -37,7 +37,7 @@ input{
 box-shadow: inset;
     height: 250px;
     width:100%;
-     background-image: url(/LOGO/yarn.jpg);
+     background-image: url(yarn.jpg);
      background-size: cover;
      filter: blur(0.1px);
 }
@@ -86,7 +86,7 @@ li{
 .outerbox{
     height:320px;
     width:280px;
-    background-image: url(/LOGO/bird.jpg);
+    background-image: url(bird.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     border-top-left-radius:9px;
@@ -128,7 +128,7 @@ border-radius: 9px;
 .outerbox1{
      height:320px;
     width:280px;
-    background-image:url(/LOGO/bunny.jpg);
+    background-image:url(bunny.jpg);
     background-size: cover;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
@@ -167,7 +167,7 @@ content: '';
     border-radius: 9px;
 }
 .outerbox2{
-    background-image: url(/LOGO/purseee.jpg);
+    background-image: url(purseee.jpg);
     height:320px;
     width:280px;
     background-size: cover;
@@ -190,4 +190,5 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
     position: absolute;
     top: 325px;
     left:130px ;
+
 }
