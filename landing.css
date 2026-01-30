@@ -7,10 +7,12 @@
 }
 
 body {
-    background-color: #FFF5F0; /* Your signature soft pink/peach */
-    overflow-x: hidden; /* Prevents scrollbar from the blobs */
+    background-color: #FFF5F0; /* Soft Peach */
+    overflow-x: hidden;
     height: 100vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 /* --- NAVIGATION --- */
@@ -20,7 +22,7 @@ nav {
     align-items: center;
     padding: 20px 5%;
     position: relative;
-    z-index: 10;
+    z-index: 100;
 }
 
 .logo {
@@ -28,20 +30,26 @@ nav {
     align-items: center;
     gap: 10px;
     font-weight: 700;
-    font-size: 1.2rem;
-    color: #2D6A86; /* A nice teal blue for contrast */
+    font-size: 1.4rem;
+    color: #2D6A86;
+    letter-spacing: 1px;
 }
 
 .logo img {
-    height: 40px;
+    height: 45px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #333;
-    margin: 0 15px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 500;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
@@ -49,8 +57,15 @@ nav {
 }
 
 .search-icon img {
-    height: 20px;
-    opacity: 0.6;
+    height: 24px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.search-icon img:hover {
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 /* --- HERO SECTION --- */
@@ -59,9 +74,9 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
-    height: 80vh; /* Takes up most of the screen */
+    flex: 1; /* Fills remaining height */
     position: relative;
-    z-index: 5;
+    z-index: 10;
 }
 
 /* Left Side Text */
@@ -71,100 +86,163 @@ nav {
 }
 
 .subtitle {
-    letter-spacing: 5px;
-    font-size: 0.9rem;
+    letter-spacing: 6px;
+    font-size: 1rem;
     margin-bottom: 10px;
     text-transform: uppercase;
-    color: #555;
+    color: #666;
+    font-weight: 600;
 }
 
 h1 {
-    font-size: 5rem;
-    font-weight: 400; /* Thin but big */
+    font-family: 'Playfair Display', serif; /* Elegant font for big text */
+    font-size: 6rem;
+    font-weight: 700;
     margin-bottom: 20px;
-    color: #000;
-    line-height: 1;
+    color: #1a1a1a;
+    line-height: 0.9;
 }
 
 .description {
-    color: #666;
+    color: #555;
     margin-bottom: 40px;
-    line-height: 1.6;
-    font-family: monospace; /* Gives that "typewriter" vibe from your design */
+    line-height: 1.8;
+    font-size: 1.1rem;
+    max-width: 400px;
+    font-family: 'Courier New', monospace; /* Typewriter style */
 }
 
 .explore-btn {
-    padding: 12px 30px;
-    border: 2px solid #333; /* Outline style */
+    display: inline-block;
+    padding: 15px 40px;
+    border: 2px solid #333;
     text-decoration: none;
     color: #333;
     font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
     background: transparent;
-    transition: all 0.3s;
 }
 
 .explore-btn:hover {
     background: #333;
     color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
 }
 
 /* Right Side Visual */
 .hero-visual {
-    flex: 1;
+    flex: 1.2;
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .hero-img {
     width: 100%;
-    max-width: 450px;
+    max-width: 550px; /* Big image */
     z-index: 2;
     position: relative;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
 }
 
-/* --- BACKGROUND SHAPES (The Blobs) --- */
-.blob-left {
+.pink-circle {
     position: absolute;
-    bottom: -10%;
-    left: -10%;
-    width: 50vw;
-    height: 50vw;
-    background-color: #F8D7C8; /* Darker peach */
+    width: 450px;
+    height: 450px;
+    background-color: #FAD0C4; /* Darker Pink Circle behind image */
     border-radius: 50%;
     z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* --- DECORATIVE BLOBS --- */
+.blob-left {
+    position: absolute;
+    bottom: -15%;
+    left: -10%;
+    width: 40vw;
+    height: 40vw;
+    background-color: #F8E1D6;
+    border-radius: 50%;
+    z-index: 1;
+    filter: blur(40px);
 }
 
 .blob-right {
     position: absolute;
-    top: -20%;
+    top: -15%;
     right: -10%;
-    width: 60vw;
-    height: 60vw;
-    background-color: #F8D7C8;
+    width: 45vw;
+    height: 45vw;
+    background-color: #F8E1D6;
     border-radius: 50%;
     z-index: 1;
+    filter: blur(40px);
 }
 
-/* --- RESPONSIVE --- */
+/* --- RESPONSIVE MOBILE --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+}
+
+@media (max-width: 900px) {
+    h1 { font-size: 4rem; }
+    .hero-img { max-width: 400px; }
+    .pink-circle { width: 300px; height: 300px; }
+}
+
 @media (max-width: 768px) {
+    nav { padding: 15px 20px; }
+    
+    .menu-toggle { display: flex; }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    .nav-links.active { display: flex; }
+
     .hero {
-        flex-direction: column-reverse; /* Image on top, text below */
+        flex-direction: column-reverse; /* Image Top, Text Bottom */
         justify-content: center;
         text-align: center;
-        height: auto;
-        padding-top: 50px;
+        padding-top: 20px;
     }
 
-    h1 {
-        font-size: 3.5rem;
+    .hero-text {
+        margin-top: 30px;
     }
 
-    .nav-links {
-        display: none; /* Hide menu links on mobile for simplicity */
-    }
+    h1 { font-size: 3.5rem; }
+    
+    .description { margin: 0 auto 30px auto; }
 
-    .blob-left, .blob-right {
-        opacity: 0.5;
-    }
-}
+    .hero-img { max-width: 280px; }
+    .pink-circle { width: 220px; height: 220px; }
+    
+    .blob-left, .blob-right { opacity: 0.5; }
+        }
+        
