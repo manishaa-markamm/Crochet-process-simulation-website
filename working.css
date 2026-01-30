@@ -1,8 +1,7 @@
 /* --- VIBRANT & COLORFUL WORKING PAGE --- */
 
-/* Import cute fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap'); /* Playful font for headers */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
 
 * {
     margin: 0;
@@ -23,9 +22,9 @@ body {
 /* --- NAVBAR --- */
 .navbar {
     background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px); /* Glass effect */
+    backdrop-filter: blur(10px);
     padding: 15px 30px;
-    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3); /* Pink shadow */
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,17 +33,17 @@ body {
 
 .navbar span {
     font-weight: 600;
-    color: #FF6B6B; /* Coral Pink */
+    color: #FF6B6B;
     font-size: 0.95rem;
     transition: transform 0.2s;
 }
 
 .navbar a:hover span {
-    transform: translateX(-5px); /* Animation on hover */
+    transform: translateX(-5px);
 }
 
 .nav-title {
-    color: #FF8E53 !important; /* Orange accent */
+    color: #FF8E53 !important;
     font-family: 'Fredoka', sans-serif;
     letter-spacing: 1px;
 }
@@ -69,7 +68,6 @@ body {
     background: white;
     padding: 15px 30px;
     border-radius: 20px;
-    /* Soft colorful shadow */
     box-shadow: 0 10px 25px rgba(255, 105, 180, 0.15); 
     border: 2px solid #FFF0F5;
 }
@@ -79,12 +77,12 @@ body {
     font-size: 1.8rem;
     background: linear-gradient(45deg, #FF6B6B, #FF8E53);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Gradient Text */
+    -webkit-text-fill-color: transparent;
     margin-bottom: 5px;
 }
 
 #step-count {
-    color: #888;
+    color: #FF6B6B;
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: 700;
@@ -93,7 +91,6 @@ body {
     padding: 4px 10px;
     border-radius: 10px;
     display: inline-block;
-    color: #FF6B6B;
 }
 
 /* --- CIRCULAR GRAPH --- */
@@ -112,10 +109,9 @@ body {
     justify-content: center;
     position: relative;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    background: white; /* Fallback */
+    background: white;
 }
 
-/* The donut hole */
 .circular-chart::before {
     content: "";
     position: absolute;
@@ -151,27 +147,25 @@ body {
 
 /* LEFT: Visual Box */
 .visual-box {
-    background-color: #FFF5F0; /* Soft Peach */
+    background-color: #000; /* Black background looks better behind video */
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: hidden; /* This crops the video edges */
     position: relative;
     box-shadow: 0 10px 20px rgba(255, 182, 193, 0.2);
     border: 3px solid white;
 }
 
+/* VIDEO CROP LOGIC: 'cover' makes it zoom to fill the box */
+.visual-box video, 
 .visual-box img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.visual-box:hover img {
-    transform: scale(1.02); /* Slight zoom on hover */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This crops the sides to fill the square */
+    object-position: center; /* Keeps the center of the video visible */
+    border-radius: 15px;
 }
 
 /* RIGHT: Instructions */
@@ -188,7 +182,6 @@ body {
     overflow: hidden;
 }
 
-/* Decorative colorful line on top */
 .instruction-box::before {
     content: "";
     position: absolute;
@@ -211,7 +204,7 @@ body {
     font-size: 1.15rem;
     line-height: 1.8;
     color: #666;
-    background: #FFF9FA; /* Very light pink background for text */
+    background: #FFF9FA;
     padding: 15px;
     border-radius: 10px;
     border-left: 4px solid #FFB7B2;
@@ -235,7 +228,6 @@ body {
 #progress-fill {
     width: 0%;
     height: 100%;
-    /* Colorful Gradient Bar */
     background: linear-gradient(90deg, #FF9A9E 0%, #FECFEF 50%, #FF8E53 100%);
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 20px;
@@ -259,9 +251,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Eye-Catching Primary Button */
 .btn.primary {
-    /* Sunset Gradient */
     background: linear-gradient(45deg, #FF6B6B, #FF8E53);
     color: white;
     box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
@@ -296,7 +286,7 @@ body {
 /* --- MOBILE RESPONSIVE --- */
 @media (max-width: 900px) {
     .workspace {
-        grid-template-columns: 1fr; /* Stack */
+        grid-template-columns: 1fr;
         height: auto;
     }
 
@@ -308,7 +298,7 @@ body {
         background: transparent;
     }
     
-    .visual-box img {
+    .visual-box video, .visual-box img {
         border-radius: 15px;
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
@@ -325,15 +315,4 @@ body {
     .tut-header h1 {
         font-size: 1.4rem;
     }
-    }
-
-
-/* Add this to your existing .visual-box styles or at the bottom */
-
-video {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
-    object-fit: contain; /* Keeps aspect ratio */
-}
-
+        }
