@@ -127,26 +127,40 @@ function updateStepDisplay() {
     const step = currentItem.steps[currentStep];
     const total = currentItem.steps.length;
 
-    // 1. Update Content
+    // 1. Update Text
     document.getElementById('step-count').innerText = `Step ${currentStep + 1} of ${total}`;
     document.getElementById('step-instruction').innerText = step.text;
     document.getElementById('step-detail').innerText = step.detail;
     
-    // Image Handling (Fallback to main image if specific step media is missing)
-    const mediaEl = document.getElementById('step-media');
-    mediaEl.src = step.media ? step.media : currentItem.image;
+    // 2. SMART MEDIA HANDLER (Video vs Image)
+    const mediaFile = step.media ? step.media : currentItem.image; // Fallback
+    const imgEl = document.getElementById('step-image');
+    const videoEl = document.getElementById('step-video');
 
-    // 2. Linear Progress Bar
+    // Check if the file is a video
+    if (mediaFile.endsWith('.mp4') || mediaFile.endsWith('.webm')) {
+        // It is a VIDEO
+        imgEl.style.display = 'none';      // Hide Image
+        videoEl.style.display = 'block';   // Show Video
+        videoEl.src = mediaFile;           // Load Video
+    } else {
+        // It is an IMAGE or GIF
+        videoEl.style.display = 'none';    // Hide Video
+        videoEl.pause();                   // Stop any playing video
+        imgEl.style.display = 'block';     // Show Image
+        imgEl.src = mediaFile;             // Load Image
+    }
+
+    // 3. Linear Progress Bar
     const percent = ((currentStep + 1) / total) * 100;
     document.getElementById('progress-fill').style.width = `${percent}%`;
 
-    // 3. CIRCULAR GRAPH (Advanced Conic Gradient)
+    // 4. Circular Graph
     const chart = document.getElementById('chart-circle');
-    // This creates the "Pie Chart" effect dynamically
-    chart.style.background = `conic-gradient(#E67E22 ${percent}%, #eee ${percent}% 100%)`;
+    chart.style.background = `conic-gradient(#FF8E53 ${percent}%, #eee ${percent}% 100%)`; // Orange fill
     document.getElementById('percent-text').innerText = `${Math.round(percent)}%`;
 
-    // 4. Button Logic
+    // 5. Button Logic
     document.getElementById('btn-prev').disabled = (currentStep === 0);
     const nextBtn = document.getElementById('btn-next');
     
@@ -161,6 +175,7 @@ function updateStepDisplay() {
         nextBtn.onclick = nextStep;
     }
 }
+
 
 function nextStep() {
     if (currentItem && currentStep < currentItem.steps.length - 1) {
