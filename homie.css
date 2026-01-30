@@ -34,7 +34,11 @@ body {
 }
 
 .logo img { height: 40px;
-          align-items: center;}
+          align-items: center;
+          justify-content: center;
+           position: relative;
+           right: 10px
+          }
 
 .nav-links {
     list-style: none;
@@ -235,6 +239,7 @@ footer {
     
     .explore-header h1 { font-size: 1.8rem; }
     }
+
 
 
 
