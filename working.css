@@ -1,4 +1,5 @@
-/* --- RESET & FONTS --- */
+/* --- WORKING PAGE STYLES --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,17 +10,19 @@
 body {
     background-color: #f4f7f6; /* Very light grey for focus */
     color: #333;
-    height: 100vh; /* Full screen height */
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* --- NAV (Simplified) --- */
+/* --- NAVBAR --- */
 .navbar {
     background: white;
     padding: 15px 30px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar span {
@@ -28,7 +31,11 @@ body {
     font-size: 0.9rem;
 }
 
-/* --- DASHBOARD LAYOUT --- */
+.nav-title {
+    color: #E67E22 !important;
+}
+
+/* --- DASHBOARD --- */
 .dashboard-container {
     flex-grow: 1;
     max-width: 1200px;
@@ -39,93 +46,144 @@ body {
     flex-direction: column;
 }
 
+/* Header Area */
 .tut-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
-    text-align: center;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
 }
 
 .tut-header h1 {
+    font-size: 1.5rem;
     color: #2c3e50;
-    font-size: 1.8rem;
+    margin-bottom: 5px;
 }
 
 #step-count {
     color: #888;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-/* --- WORKSPACE (The Split Screen) --- */
+/* --- CIRCULAR GRAPH --- */
+.progress-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circular-chart {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Background gradient set by JS */
+    transition: background 0.3s ease;
+}
+
+/* The "Donut Hole" */
+.circular-chart::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+#percent-text {
+    position: relative;
+    z-index: 2;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #2c3e50;
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* --- WORKSPACE GRID --- */
 .workspace {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 50% Left, 50% Right */
-    gap: 30px;
-    background: white;
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    grid-template-columns: 1fr 1fr; /* Split 50/50 */
+    gap: 20px;
     height: 100%;
     min-height: 400px;
 }
 
-/* LEFT SIDE: Visuals */
+/* Left: Visuals */
 .visual-box {
-    background-color: #FFE4D6; /* Soft peach background */
+    background-color: #333; /* Dark background for focus */
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .visual-box img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    border-radius: 10px;
 }
 
-/* RIGHT SIDE: Instructions */
+/* Right: Instructions */
 .instruction-box {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .text-content h2 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
     color: #2c3e50;
+    line-height: 1.3;
 }
 
 .detail-text {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
 }
 
 /* --- CONTROLS --- */
 .control-panel {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .progress-bar {
     width: 100%;
-    height: 8px;
+    height: 6px;
     background-color: #eee;
-    border-radius: 4px;
+    border-radius: 10px;
     margin-bottom: 20px;
     overflow: hidden;
 }
 
 #progress-fill {
-    width: 0%; /* JS changes this */
+    width: 0%;
     height: 100%;
-    background-color: #E67E22; /* Burnt Orange */
+    background-color: #E67E22;
     transition: width 0.3s ease;
 }
 
@@ -138,10 +196,10 @@ body {
     flex: 1;
     padding: 15px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: 600;
-    cursor: pointer;
     font-size: 1rem;
+    cursor: pointer;
     transition: all 0.2s;
 }
 
@@ -152,85 +210,43 @@ body {
 
 .btn.primary:hover {
     background-color: #34495e;
+    transform: translateY(-2px);
 }
 
 .btn.secondary {
-    background-color: #e0e0e0;
+    background-color: #f0f2f5;
     color: #555;
+}
+
+.btn.secondary:hover {
+    background-color: #e4e6e9;
 }
 
 .btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+    transform: none;
 }
 
-/* --- RESPONSIVE (Mobile) --- */
-@media (max-width: 768px) {
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 900px) {
     .workspace {
         grid-template-columns: 1fr; /* Stack visually */
         height: auto;
     }
 
     .visual-box {
-        height: 250px; /* Fixed height for image on phone */
+        height: 300px;
+        order: 1; /* Image first */
     }
 
-    .dashboard-container {
-        padding: 10px;
+    .instruction-box {
+        order: 2; /* Text second */
     }
 
-    .tut-header h1 {
-        font-size: 1.4rem;
+    .tut-header {
+        flex-direction: row; /* Keep graph next to title */
+        padding: 15px;
     }
-    }
-
-/* Add to working.css */
-
-.progress-stats {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-}
-
-/* The Circular Graph */
-.circular-chart {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 5px;
-    position: relative;
-    /* The gradient is handled by JS */
-}
-
-.circular-chart::before {
-    content: "";
-    position: absolute;
-    width: 50px; /* Inner circle size */
-    height: 50px;
-    background-color: #f4f7f6; /* Matches body background */
-    border-radius: 50%;
-}
-
-#percent-text {
-    position: relative;
-    z-index: 2;
-    font-weight: 700;
-    font-size: 0.9rem;
-    color: #2c3e50;
-}
-
-.step-badge {
-    display: inline-block;
-    background: #2c3e50;
-    color: white;
-    padding: 4px 10px;
-    border-radius: 5px;
-    font-size: 0.8rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+                                 }
+        
