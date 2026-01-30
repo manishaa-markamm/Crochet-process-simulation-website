@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #FFF5F0; /* Soft Peach */
+    background-color: #FFF5F0;
     overflow-x: hidden;
     height: 100vh;
     position: relative;
@@ -15,7 +15,7 @@ body {
     flex-direction: column;
 }
 
-/* --- NAVIGATION --- */
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -23,6 +23,7 @@ nav {
     padding: 20px 5%;
     position: relative;
     z-index: 100;
+    
 }
 
 .logo {
@@ -46,7 +47,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color:pink;
     font-size: 1rem;
     font-weight: 500;
     transition: color 0.3s;
@@ -68,18 +69,18 @@ nav {
     opacity: 1;
 }
 
-/* --- HERO SECTION --- */
+
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
-    flex: 1; /* Fills remaining height */
+    flex: 1;
     position: relative;
     z-index: 10;
 }
 
-/* Left Side Text */
+
 .hero-text {
     flex: 1;
     z-index: 5;
@@ -95,7 +96,7 @@ nav {
 }
 
 h1 {
-    font-family: 'Playfair Display', serif; /* Elegant font for big text */
+    font-family: 'Playfair Display', serif; 
     font-size: 6rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -109,7 +110,7 @@ h1 {
     line-height: 1.8;
     font-size: 1.1rem;
     max-width: 400px;
-    font-family: 'Courier New', monospace; /* Typewriter style */
+    font-family: 'Courier New', monospace; 
 }
 
 .explore-btn {
@@ -131,7 +132,7 @@ h1 {
     transform: translateY(-3px);
 }
 
-/* Right Side Visual */
+
 .hero-visual {
     flex: 1.2;
     position: relative;
@@ -142,7 +143,7 @@ h1 {
 
 .hero-img {
     width: 100%;
-    max-width: 550px; /* Big image */
+    max-width: 550px; 
     z-index: 2;
     position: relative;
     filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
@@ -160,7 +161,7 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
-/* --- DECORATIVE BLOBS --- */
+
 .blob-left {
     position: absolute;
     bottom: -15%;
@@ -185,7 +186,7 @@ h1 {
     filter: blur(40px);
 }
 
-/* --- RESPONSIVE MOBILE --- */
+
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -226,7 +227,7 @@ h1 {
     .nav-links.active { display: flex; }
 
     .hero {
-        flex-direction: column-reverse; /* Image Top, Text Bottom */
+        flex-direction: column-reverse; 
         justify-content: center;
         text-align: center;
         padding-top: 20px;
