@@ -1,4 +1,4 @@
-/* --- RESET --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,11 +7,10 @@
 }
 
 body {
-    background-color: #FFF5F0; /* Matches Index Page */
+    background-color: #FFF5F0; 
     color: #333;
 }
 
-/* --- NAVBAR --- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -57,11 +56,11 @@ body {
     color: #E67E22;
 }
 
-/* --- HEADER --- */
+
 .explore-header {
     text-align: center;
     padding: 60px 20px;
-    /* Add a background image if you have one, or keep it solid color */
+  
      background-image: url(yarn.jpg);
      background-size: cover;
      filter: blur(0.1px);
@@ -121,10 +120,9 @@ body {
 
 .search-btn img {
     width: 20px;
-    filter: brightness(0) invert(1); /* Makes black icon white */
+    filter: brightness(0) invert(1); 
 }
 
-/* --- PRODUCT GRID --- */
 main {
     padding: 40px 5%;
     min-height: 60vh;
@@ -132,12 +130,12 @@ main {
 
 .card-container {
     display: grid;
-    /* Responsive Magic: Fits as many cards as possible */
+   
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
-/* --- CARD DESIGN --- */
+
 .card {
     background: white;
     border-radius: 15px;
@@ -202,7 +200,7 @@ main {
     background: #34495e;
 }
 
-/* --- FOOTER --- */
+
 footer {
     text-align: center;
     padding: 20px;
@@ -211,7 +209,6 @@ footer {
     color: #777;
 }
 
-/* --- MOBILE RESPONSIVE --- */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -245,6 +242,7 @@ footer {
     
     .explore-header h1 { font-size: 1.8rem; }
     }
+
 
 
 
