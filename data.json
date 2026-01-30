@@ -1,60 +1,86 @@
 [
   {
     "id": "teddy",
-    "name": "Cute Teddy Bear",
+    "name": "Classic Amigurumi Bear",
     "image": "teddy.jpg",
-    "difficulty": "Medium",
-    "description": "A soft, cuddly bear perfect for beginners.",
+    "difficulty": "Intermediate",
+    "category": "Toys",
+    "details": {
+      "time": "4-5 Hours",
+      "materials": ["Brown Cotton Yarn (DK Weight)", "Polyester Stuffing", "Safety Eyes (10mm)", "Black Embroidery Thread"],
+      "tools": ["3.5mm Crochet Hook", "Yarn Needle", "Stitch Markers", "Scissors"],
+      "techniques": ["Magic Ring (MR)", "Single Crochet (sc)", "Increase (inc)", "Invisible Decrease (dec)"]
+    },
     "steps": [
-      {
-        "text": "Start with a Magic Ring.",
-        "detail": "Wrap the yarn around your finger twice and secure with a chain.",
-        "media": "assets/magic-ring.gif"
-      },
-      {
-        "text": "Single Crochet 6 times.",
-        "detail": "Insert hook into the ring, pull up a loop, yarn over and pull through.",
-        "media": "assets/single-crochet.gif"
-      },
-      {
-        "text": "Increase stitches to 12.",
-        "detail": "Do two single crochets in every stitch around the circle.",
-        "media": "assets/increase.gif"
-      }
+      {"text": "Create a Magic Ring.", "detail": "Wrap yarn around finger, pull up a loop, chain 1 to secure.", "media": "assets/magic-ring.gif"},
+      {"text": "Round 1: 6 SC into Magic Ring.", "detail": "Work 6 single crochets into the center. Pull tail tight.", "media": "assets/sc.gif"},
+      {"text": "Round 2: Increase in every stitch.", "detail": "2 SC in each stitch around. Total: 12 stitches.", "media": "assets/inc.gif"},
+      {"text": "Round 3: (1 SC, Inc) repeat around.", "detail": "SC in first stitch, 2 SC in next. Repeat 6 times. Total: 18.", "media": "assets/inc.gif"},
+      {"text": "Round 4: (2 SC, Inc) repeat around.", "detail": "SC in next 2 stitches, 2 SC in next. Repeat 6 times. Total: 24.", "media": "assets/sc.gif"},
+      {"text": "Round 5: (3 SC, Inc) repeat around.", "detail": "SC in next 3 stitches, 2 SC in next. Repeat 6 times. Total: 30.", "media": "assets/sc.gif"},
+      {"text": "Rounds 6-12: SC in each stitch.", "detail": "Work even rows to build the height of the head. 30 stitches per row.", "media": "assets/sc.gif"},
+      {"text": "Insert Safety Eyes.", "detail": "Place eyes between Round 9 and 10, about 5 stitches apart.", "media": "assets/eyes.jpg"},
+      {"text": "Round 13: (3 SC, Dec) repeat around.", "detail": "Start closing the head. SC 3, then invisible decrease. Total: 24.", "media": "assets/dec.gif"},
+      {"text": "Round 14: (2 SC, Dec) repeat around.", "detail": "SC 2, decrease. Total: 18.", "media": "assets/dec.gif"},
+      {"text": "Stuff the Head firmly.", "detail": "Add stuffing now before the hole gets too small.", "media": "assets/stuffing.jpg"},
+      {"text": "Round 15: (1 SC, Dec) repeat around.", "detail": "SC 1, decrease. Total: 12.", "media": "assets/dec.gif"},
+      {"text": "Round 16: Decrease around.", "detail": "Decrease 6 times. Total: 6 stitches.", "media": "assets/dec.gif"},
+      {"text": "Fasten off and weave in end.", "detail": "Cut yarn, use needle to close the remaining hole.", "media": "assets/finish.gif"},
+      {"text": "Make Body (Start Magic Ring).", "detail": "Repeat Rounds 1-4 of head to start body.", "media": "assets/magic-ring.gif"},
+      {"text": "Sew Head to Body.", "detail": "Use yarn needle to stitch the head securely to the body.", "media": "assets/sew.gif"}
     ]
   },
   {
     "id": "sunflower",
-    "name": "Sunflower Purse",
-    "image": "purseee.jpg",
-    "difficulty": "Hard",
-    "description": "A stylish boho purse with a sunflower motif.",
+    "name": "Sunflower Coaster",
+    "image": "sunflower.jpg",
+    "difficulty": "Beginner",
+    "category": "Home Decor",
+    "details": {
+      "time": "45 Minutes",
+      "materials": ["Brown Yarn (Center)", "Yellow Yarn (Petals)", "Cotton Yarn"],
+      "tools": ["4.0mm Hook", "Scissors"],
+      "techniques": ["Double Crochet (dc)", "Slip Stitch (sl st)", "Chain (ch)"]
+    },
     "steps": [
-      {
-        "text": "Chain 20 stitches.",
-        "detail": "Create a slip knot and chain 20 to start the base.",
-        "media": "assets/chain.gif"
-      },
-      {
-        "text": "Double Crochet row.",
-        "detail": "Work one double crochet into each chain stitch.",
-        "media": "assets/double-crochet.gif"
-      }
+      {"text": "Start with Brown Yarn: Magic Ring.", "detail": "Create loop, ch 3 (counts as first DC).", "media": "assets/magic-ring.gif"},
+      {"text": "Round 1: 11 DC into ring.", "detail": "Double crochet 11 times. Join with sl st to top of ch 3. Total: 12.", "media": "assets/dc.gif"},
+      {"text": "Round 2: Increase (2 DC) in each st.", "detail": "Chain 3, DC in same st. 2 DC in each st around. Total: 24.", "media": "assets/dc.gif"},
+      {"text": "Switch to Yellow Yarn.", "detail": "Fasten off brown. Attach yellow yarn to any stitch.", "media": "assets/change-color.gif"},
+      {"text": "Start Petal: Chain 2.", "detail": "Ch 2, DC in same stitch.", "media": "assets/chain.gif"},
+      {"text": "Form Tip: Chain 2, Sl st in 2nd ch.", "detail": "This creates the pointy 'picot' top of the petal.", "media": "assets/picot.gif"},
+      {"text": "Finish Petal: DC in next st, Ch 2, Sl st.", "detail": "DC in next st, ch 2, slip stitch in same st base.", "media": "assets/slst.gif"},
+      {"text": "Repeat Petal pattern around.", "detail": "Make 12 petals total around the circle.", "media": "assets/petal.gif"},
+      {"text": "Fasten off.", "detail": "Cut yarn and weave in all ends.", "media": "assets/finish.gif"}
     ]
   },
   {
-    "id": "bunny",
-    "name": "Curtain Bunny",
-    "image": "bunny.jpg",
+    "id": "bee",
+    "name": "Chunky Bumblebee",
+    "image": "bee.jpg",
     "difficulty": "Easy",
-    "description": "A cute bunny that hugs your curtains.",
+    "category": "Plushie",
+    "details": {
+      "time": "1.5 Hours",
+      "materials": ["Yellow Velvet Yarn", "Black Velvet Yarn", "White Felt (Wings)"],
+      "tools": ["5.5mm Hook (Chunky)", "Large Eye Needle"],
+      "techniques": ["Color Change", "SC", "Inc", "Dec"]
+    },
     "steps": [
-      {
-        "text": "Chain 10 for ears.",
-        "detail": "Start with the long ears using simple chains.",
-        "media": "assets/chain.gif"
-      }
+      {"text": "Yellow: Magic Ring 6 SC.", "detail": "Start with yellow yarn.", "media": "assets/magic-ring.gif"},
+      {"text": "Row 2: Increase around (12).", "detail": "2 SC in each stitch.", "media": "assets/inc.gif"},
+      {"text": "Row 3: (1 SC, Inc) around (18).", "detail": "Standard increase circle.", "media": "assets/inc.gif"},
+      {"text": "Row 4: (2 SC, Inc) around (24).", "detail": "Circle gets wider.", "media": "assets/inc.gif"},
+      {"text": "Change to Black Yarn.", "detail": "Switch colors for the stripe.", "media": "assets/change-color.gif"},
+      {"text": "Row 5-6: SC around in Black.", "detail": "2 rows of black stitches.", "media": "assets/sc.gif"},
+      {"text": "Change to Yellow Yarn.", "detail": "Switch back to yellow.", "media": "assets/change-color.gif"},
+      {"text": "Row 7-8: SC around in Yellow.", "detail": "2 rows of yellow.", "media": "assets/sc.gif"},
+      {"text": "Change to Black Yarn.", "detail": "Second stripe.", "media": "assets/change-color.gif"},
+      {"text": "Row 9-10: SC around in Black.", "detail": "2 rows of black.", "media": "assets/sc.gif"},
+      {"text": "Change to Yellow. Insert Eyes.", "detail": "Put eyes in the first yellow section.", "media": "assets/eyes.jpg"},
+      {"text": "Row 11: Decrease (2 SC, Dec).", "detail": "Start closing the body.", "media": "assets/dec.gif"},
+      {"text": "Row 12: Decrease (1 SC, Dec).", "detail": "Stuff firmly now.", "media": "assets/stuffing.jpg"},
+      {"text": "Row 13: Dec around. Close hole.", "detail": "Sew shut.", "media": "assets/finish.gif"}
     ]
   }
-]
-
+        ]
