@@ -57,7 +57,7 @@ body {
     text-align: center;
     padding: 60px 20px;
     /* Add a background image if you have one, or keep it solid color */
-    background: url(yarn.png);
+    background: url(yarn.jpg);
 }
 
 .explore-header h1 {
@@ -233,4 +233,5 @@ footer {
     
     .explore-header h1 { font-size: 1.8rem; }
     }
+
 
