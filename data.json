@@ -62,20 +62,20 @@
       "techniques": ["Double Crochet (dc)", "Chain (ch)", "Slip Stitch"]
     },
     "steps": [
-      {"text": "Brown: Magic Ring", "detail": "Start with brown yarn, create loop.", "media": null},
-      {"text": "R1: 12 DC in Ring", "detail": "Chain 3 (counts as DC), work 11 DC.", "media": null},
-      {"text": "R2: 2 DC in each", "detail": "Increase in every stitch (Total 24).", "media": null},
-      {"text": "Switch to Yellow", "detail": "Fasten off brown, attach yellow.", "media": null},
-      {"text": "Petal: Ch 2, DC, Ch 2", "detail": "Create the first petal shape.", "media": null},
-      {"text": "Sl St to finish petal", "detail": "Anchor the petal to the base.", "media": null},
-      {"text": "Repeat around", "detail": "Make 12 petals total.", "media": null},
-      {"text": "Weave ends", "detail": "Hide all loose yarn tails.", "media": null}
+      {"text": "Brown: Magic Ring", "detail": "Start with brown yarn, create loop.", "media": "sunflower.jpg"},
+      {"text": "R1: 12 DC in Ring", "detail": "Chain 3 (counts as DC), work 11 DC.", "media": "sunflower.jpg"},
+      {"text": "R2: 2 DC in each", "detail": "Increase in every stitch (Total 24).", "media": "sunflower.jpg"},
+      {"text": "Switch to Yellow", "detail": "Fasten off brown, attach yellow.", "media": "sunflower.jpg"},
+      {"text": "Petal: Ch 2, DC, Ch 2", "detail": "Create the first petal shape.", "media": "sunflower.jpg"},
+      {"text": "Sl St to finish petal", "detail": "Anchor the petal to the base.", "media": "sunflower.jpg"},
+      {"text": "Repeat around", "detail": "Make 12 petals total.", "media": "sunflower.jpg"},
+      {"text": "Weave ends", "detail": "Hide all loose yarn tails.", "media": "sunflower.jpg"}
     ]
   },
   {
     "id": "bee",
     "name": "Chunky Bumblebee",
-    "image": "bee.jpg",
+    "image": "bumblebee.jpg",
     "difficulty": "Easy",
     "category": "Plushie",
     "details": {
@@ -85,14 +85,14 @@
       "techniques": ["Color Change", "SC", "Inc", "Dec"]
     },
     "steps": [
-      {"text": "Yellow: 6 SC in MR", "detail": "Start with Magic Ring.", "media": null},
-      {"text": "R2: Inc around (12)", "detail": "2 SC in each stitch.", "media": null},
-      {"text": "R3: (1 SC, Inc)", "detail": "Total 18 stitches.", "media": null},
-      {"text": "Change to Black", "detail": "Switch colors for stripe.", "media": null},
-      {"text": "R4-5: SC around", "detail": "Black stripe rows.", "media": null},
-      {"text": "Change to Yellow", "detail": "Switch back to yellow.", "media": null},
-      {"text": "R6-7: SC around", "detail": "Yellow body rows.", "media": null},
-      {"text": "Decrease & Close", "detail": "Stuff and sew shut.", "media": null}
+      {"text": "Yellow: 6 SC in MR", "detail": "Start with Magic Ring.", "media": "bumblebee.jpg"},
+      {"text": "R2: Inc around (12)", "detail": "2 SC in each stitch.", "media": "bumblebee.jpg"},
+      {"text": "R3: (1 SC, Inc)", "detail": "Total 18 stitches.", "media": "bumblebee.jpg"},
+      {"text": "Change to Black", "detail": "Switch colors for stripe.", "media": "bumblebee.jpg"},
+      {"text": "R4-5: SC around", "detail": "Black stripe rows.", "media": "bumblebee.jpg"},
+      {"text": "Change to Yellow", "detail": "Switch back to yellow.", "media": "bumblebee.jpg"},
+      {"text": "R6-7: SC around", "detail": "Yellow body rows.", "media": "bumblebee.jpg"},
+      {"text": "Decrease & Close", "detail": "Stuff and sew shut.", "media": "bumblebee.jpg"}
     ]
   },
   {
@@ -108,13 +108,34 @@
       "techniques": ["Front Loop Only", "Back Loop Only", "Sewing"]
     },
     "steps": [
-      {"text": "Make Side A (Blue)", "detail": "Follow standard ball pattern for head.", "media": null},
-      {"text": "Make Tentacles", "detail": "Ch 6, SC back down, repeat 8 times.", "media": null},
-      {"text": "Make Side B (Pink)", "detail": "Repeat head pattern in pink.", "media": null},
-      {"text": "Connect Sides", "detail": "Place wrong sides together.", "media": null},
-      {"text": "Sew edges", "detail": "Stitch around the bottom rim.", "media": null}
+      {"text": "Make Side A (Blue)", "detail": "Follow standard ball pattern for head.", "media": "octopus.jpg"},
+      {"text": "Make Tentacles", "detail": "Ch 6, SC back down, repeat 8 times.", "media": "octopus.jpg"},
+      {"text": "Make Side B (Pink)", "detail": "Repeat head pattern in pink.", "media": "octopus.jpg"},
+      {"text": "Connect Sides", "detail": "Place wrong sides together.", "media": "octopus.jpg"},
+      {"text": "Sew edges", "detail": "Stitch around the bottom rim.", "media": "octopus.jpg"}
     ]
   },
+  
+  {
+    "id": "purse",
+    "name": "Boho Sling Bag",
+    "image": "purseee.jpg",
+    "difficulty": "Intermediate",
+    "category": "Accessories",
+    "details": {
+      "time": "6 Hours",
+      "materials": ["Cotton Cord", "Button"],
+      "tools": ["5.0mm Hook"],
+      "techniques": ["HDC", "Star Stitch"]
+    },
+    "steps": [
+      {"text": "Chain 30", "detail": "Base chain for width.", "media": "purseee.jpg"},
+      {"text": "HDC Rows", "detail": "Work back and forth for 40 rows.", "media": "purseee.jpg"},
+      {"text": "Fold & Seam", "detail": "Fold rectangle, sew sides.", "media": "purseee.jpg"},
+      {"text": "Add Strap", "detail": "Chain 100, SC back, attach.", "media": "purseee.jpg"}
+    ]
+  },
+ 
   {
     "id": "granny-square",
     "name": "Classic Granny Square",
@@ -133,25 +154,6 @@
       {"text": "Change Color", "detail": "Join new yarn in corner space.", "media": null},
       {"text": "R2: Corners", "detail": "3 DC, Ch 2, 3 DC in each corner.", "media": null},
       {"text": "Fasten Off", "detail": "Weave in ends.", "media": null}
-    ]
-  },
-  {
-    "id": "purse",
-    "name": "Boho Sling Bag",
-    "image": "purse.jpg",
-    "difficulty": "Intermediate",
-    "category": "Accessories",
-    "details": {
-      "time": "6 Hours",
-      "materials": ["Cotton Cord", "Button"],
-      "tools": ["5.0mm Hook"],
-      "techniques": ["HDC", "Star Stitch"]
-    },
-    "steps": [
-      {"text": "Chain 30", "detail": "Base chain for width.", "media": null},
-      {"text": "HDC Rows", "detail": "Work back and forth for 40 rows.", "media": null},
-      {"text": "Fold & Seam", "detail": "Fold rectangle, sew sides.", "media": null},
-      {"text": "Add Strap", "detail": "Chain 100, SC back, attach.", "media": null}
     ]
   },
   {
